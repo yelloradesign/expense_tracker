@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <button id="openModalBtn" class="btn-primary">Add Transaction</button>
+        </header>
+        <div class="balance" id="balance">₹0.00</div>
+        <div class="summary">
+            <div class="summary-box income" id="income">₹0.00</div>
+            <div class="summary-box expense" id="expense">₹0.00</div>
+        </div>
+        <div class="transaction-list" id="transactionList">
+            <ul></ul>
+        </div>
+    </div>
+
+    <!-- Modal for Adding and Editing Transaction -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2 id="modalTitle">Add Transaction</h2>
+            <form id="transactionForm">
+                <input type="text" id="name" placeholder="Transaction Name" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <input type="date" id="date" required>
+                <div class="select-container">
+                    <select id="type" required>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <select id="category" required>
+                        <option value="General">General</option>
+                          <option value="Shopping">Shopping</option>
+                          <option value="Salary">Salary</option>
+                            <option value="Groceries">Groceries</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary" id="submitBtn">Add Transaction</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 All Rights Reserved | Created By <strong>Suman Das</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
